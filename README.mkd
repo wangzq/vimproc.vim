@@ -30,10 +30,42 @@ Not supported platforms:
 * Copy `autoload/*`, `lib/*` and `plugin/*` files to your 'runtimepath'
   directory (see `:help runtimepath`).
 
+### dein.vim
+
+If you use [dein.vim](http://github.com/Shougo/dein.vim), you can
+update and build vimproc automatically. This is the recommended package manager.
+
+```vim
+call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+```
+
+### Vim-Plug
+
+If you use [vim-plug](https://github.com/junegunn/vim-plug), you can update and build vimproc automatically.
+
+```vim
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+```
+### Vundle
+
+If you use [Vundle](https://github.com/VundleVim/Vundle.vim), add the following to your `.vimrc`.
+
+```vim
+Plugin 'Shougo/vimproc.vim'
+```
+Then compile the plugin manually where it was installed.
+
+i.e. on Linux & Mac
+```bash
+$ cd ~/.vim/bundle/vimproc.vim && make
+```
+
+See [bulding](https://github.com/Shougo/vimproc.vim#building)
+
 ### NeoBundle
 
 If you use [neobundle.vim](http://github.com/Shougo/neobundle.vim), you can
-update and build vimproc automatically. This is the recommended package manager.
+update and build vimproc automatically.
 
 ```vim
 NeoBundle 'Shougo/vimproc.vim', {
